@@ -1,7 +1,16 @@
-import { ADD_BOOK } from '../reducers/booksReducer';
+const CREATE_BOOK = 'CREATE_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
 
-const addBook = () => ({
-  type: ADD_BOOK,
+const createBook = (book) => ({
+  type: CREATE_BOOK,
+  payload: book,
 });
 
-export default addBook;
+const removeBook = (book) => ({
+  type: REMOVE_BOOK,
+  payload: book,
+});
+
+export {
+  CREATE_BOOK, REMOVE_BOOK, createBook, removeBook,
+};

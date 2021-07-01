@@ -1,12 +1,10 @@
-/* eslint-disable */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../presentation/Book';
 
 const BooksList = (props) => {
   const { books } = props;
-  // const books = [{ book: 'book1' }]
-  console.log(props);
 
   return (
     <div>
@@ -23,7 +21,7 @@ const BooksList = (props) => {
           </div>
         </div>
       </div>
-      {books.map((book) => { return <Book book={book} key={0} /> })}
+      {books.map((book) => <Book book={book} key={0} />)}
     </div>
   );
 };
@@ -31,5 +29,13 @@ const BooksList = (props) => {
 const mapStateToProps = (state) => ({
   books: state.booksReducer.books,
 });
+
+BooksList.propTypes = {
+  books: PropTypes.string,
+};
+
+BooksList.defaultProps = {
+  books: [],
+};
 
 export default connect(mapStateToProps)(BooksList);
