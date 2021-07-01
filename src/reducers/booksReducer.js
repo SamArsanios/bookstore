@@ -1,13 +1,12 @@
-const ADD_BOOK = 'ADD_BOOK'
+const ADD_BOOK = 'ADD_BOOK';
 
-const booksReducer = (state, action) =>{
-  switch(action.type){
+const booksReducer = (state, action) => {
+  switch (action.type) {
     case ADD_BOOK:
-      return
-      state;
+      return { state };
     default:
-      return state;
+      return { state };
   }
-}
+};
 
 export default booksReducer;

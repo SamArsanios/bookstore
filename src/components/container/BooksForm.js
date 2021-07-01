@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const BooksForm = () => {
-  return (
-    <div>
-      Books form
-    </div>
-  )
-}
+const BooksForm = () => (
+  <div>
+    Books form
+  </div>
+);
 
-export default BooksForm
+export default BooksForm;
