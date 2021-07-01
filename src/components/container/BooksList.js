@@ -1,9 +1,11 @@
 /* eslint-disable */
 import React from 'react';
 import { connect } from 'react-redux';
+import Book from '../presentation/Book';
 
 const BooksList = (props) => {
   const { books } = props;
+  // const books = [{ book: 'book1' }]
   console.log(props);
 
   return (
@@ -21,6 +23,7 @@ const BooksList = (props) => {
           </div>
         </div>
       </div>
+      {books.map((book) => { return <Book book={book} key={0} /> })}
     </div>
   );
 };
