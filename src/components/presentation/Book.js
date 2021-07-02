@@ -22,7 +22,7 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
-  book: PropTypes.string,
+  book: PropTypes.objectOf(PropTypes.string),
   handleRemoveBook: PropTypes.func.isRequired,
 };
 

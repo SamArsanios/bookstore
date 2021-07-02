@@ -12,7 +12,6 @@ const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_BOOK: {
       const book = action.payload;
-      console.log(book);
       return {
         ...state,
         books: [...state.books].concat(book),

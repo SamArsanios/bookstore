@@ -6,10 +6,8 @@ import { removeBook } from '../../actions';
 
 const BooksList = (props) => {
   const { books, removeBook } = props;
-  console.log(props);
 
   const handleRemoveBook = (book) => {
-    console.log(book);
     removeBook(book.ID);
   };
 
@@ -42,7 +40,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 BooksList.propTypes = {
-  books: PropTypes.string,
+  books: PropTypes.arrayOf(PropTypes.object),
   removeBook: PropTypes.func.isRequired,
 };
 
