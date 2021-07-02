@@ -6,19 +6,21 @@ import { removeBook, changeFilter } from '../../actions';
 import CategoryFilter from '../presentation/CategoryFilter';
 
 const BooksList = (props) => {
-  const { books, removeBook, changeFilter } = props;
-
+  const {
+    books, removeBook, changeFilter, filter,
+  } = props;
   const handleRemoveBook = (book) => {
     removeBook(book.ID);
   };
 
   const handleFilterChange = (e) => {
-    // console.log(e.target.value);
     const filter = e.target.value;
-    console.log(filter);
     changeFilter(filter);
   };
 
+  const filterBooks = (books, filter) => (filter === '' || filter === 'All' ? books
+    : books.filter((book) => book.category === filter));
+  const filteredBooks = filterBooks(books, filter);
   return (
     <div>
       <CategoryFilter handleFilterChange={handleFilterChange} />
@@ -35,13 +37,22 @@ const BooksList = (props) => {
           </div>
         </div>
       </div>
-      {books.map((book) => <Book book={book} key={book.ID} handleRemoveBook={handleRemoveBook} />)}
+      {
+        filteredBooks.map((book) => (
+          <Book
+            book={book}
+            key={book.ID}
+            handleRemoveBook={handleRemoveBook}
+          />
+        ))
+      }
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
   books: state.booksReducer.books,
+  filter: state.changeFilterReducer.filter,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -55,6 +66,7 @@ BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object),
   removeBook: PropTypes.func.isRequired,
   changeFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
 BooksList.defaultProps = {
