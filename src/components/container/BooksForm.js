@@ -19,6 +19,7 @@ const BooksForm = (props) => {
 
   const handleSubmit = () => {
     const book = {
+      ID: Math.random().toString(),
       title,
       category,
     };

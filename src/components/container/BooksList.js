@@ -21,7 +21,7 @@ const BooksList = (props) => {
           </div>
         </div>
       </div>
-      {books.map((book) => <Book book={book} key={0} />)}
+      {books.map((book) => <Book book={book} key={book.ID} />)}
     </div>
   );
 };
