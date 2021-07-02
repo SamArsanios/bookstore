@@ -1,7 +1,9 @@
-// /* eslint-disable */
+/* eslint-disable */
 import React, { useState } from 'react';
+import { createBook } from '../../actions/index';
+import { connect } from 'react-redux';
 
-const BooksForm = () => {
+const BooksForm = (props) => {
   const categories = ['Action', 'Biography', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
@@ -9,11 +11,22 @@ const BooksForm = () => {
     setTitle(e.target.value);
     console.log(title);
   };
+
   const handleCategoryChange = (e) => {
     // console.log(e.target.value);
     setCategory(e.target.value);
   };
+
+  const handleSubmit = () => {
+    const book = {
+      title,
+      category,
+    };
+    props.addBook(book)
+  };
+
   console.log(['category:', category, 'k']);
+  console.log(props);
   return (
     <div>
       <div className="mb-3">
@@ -40,9 +53,25 @@ const BooksForm = () => {
         }
       </select>
 
-      <button type="button" className="btn btn-dark">Submit</button>
+      <button type="button" className="btn btn-dark" onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
 
-export default BooksForm;
+const mapDispatchToProps = (dispatch) => {
+  return ({
+    addBook: function (book) { dispatch(createBook(book)) }
+  });
+}
+
+// const mapDispatchToProps = (dispatch) => {
+//   return ({
+//     handleFormToggle: function () {
+//       dispatch(handleFormToggle())
+//     },
+//     addBook: function (book) {
+//       dispatch(createBook(book))
+//     }
+//   })
+// }
+export default connect(null, mapDispatchToProps)(BooksForm);
