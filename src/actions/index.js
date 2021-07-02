@@ -12,11 +12,10 @@ const removeBook = (id) => ({
   payload: id,
 });
 
-const changeFilter = (id) => ({
+const changeFilter = (filter) => ({
   type: CHANGE_FILTER,
-  payload: id,
+  payload: filter,
 });
-
 export {
   CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER, createBook, removeBook, changeFilter,
 };

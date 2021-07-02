@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createBook } from '../../actions/index';
 
 const BooksForm = (props) => {
+  const { addBook } = props;
   const categories = ['Action', 'Biography', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
@@ -21,7 +22,7 @@ const BooksForm = (props) => {
       title,
       category,
     };
-    props.addBook(book);
+    addBook(book);
     setTitle('');
     setCategory('');
   };

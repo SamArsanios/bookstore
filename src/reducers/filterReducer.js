@@ -1,14 +1,15 @@
 import { CHANGE_FILTER } from '../actions';
 
 const initialState = {
-  filter: 'category',
+  filter: '',
 };
 
 const changeFilterReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_FILTER: {
+      const filter = action.payload;
       return {
-        ...state,
+        ...state, filter,
       };
     }
     default:
