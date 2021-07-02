@@ -11,6 +11,7 @@ const initialState = {
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_BOOK:
+      console.log(action.payload);
       return { ...state };
     case REMOVE_BOOK:
       return { ...state };
