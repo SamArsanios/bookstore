@@ -9,11 +9,9 @@ const BooksForm = (props) => {
   const [category, setCategory] = useState('');
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
-    console.log(title);
   };
 
   const handleCategoryChange = (e) => {
-    // console.log(e.target.value);
     setCategory(e.target.value);
   };
 
@@ -27,9 +25,6 @@ const BooksForm = (props) => {
     setTitle("");
     setCategory("");
   };
-
-  console.log(['category:', category, 'k']);
-  console.log(props);
   return (
     <div>
       <div className="mb-3">
@@ -67,14 +62,4 @@ const mapDispatchToProps = (dispatch) => {
   });
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return ({
-//     handleFormToggle: function () {
-//       dispatch(handleFormToggle())
-//     },
-//     addBook: function (book) {
-//       dispatch(createBook(book))
-//     }
-//   })
-// }
 export default connect(null, mapDispatchToProps)(BooksForm);

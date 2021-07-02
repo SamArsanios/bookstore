@@ -18,8 +18,12 @@ const booksReducer = (state = initialState, action) => {
         books: [...state.books].concat(book),
       };
     }
-    case REMOVE_BOOK:
-      return { ...state };
+    case REMOVE_BOOK: {
+      const id = action.payload;
+      let newBooks = [...state.books];
+      newBooks = newBooks.filter((book) => book.ID !== id);
+      return { ...state, books: newBooks };
+    }
     default:
       return { ...state };
   }
