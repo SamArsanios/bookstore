@@ -23,7 +23,9 @@ const BooksForm = (props) => {
       title,
       category,
     };
-    props.addBook(book)
+    props.addBook(book);
+    setTitle("");
+    setCategory("");
   };
 
   console.log(['category:', category, 'k']);
