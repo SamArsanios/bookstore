@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Calculator App
+# Bookstore App
 
 A Bookstore application that will help organize and manage the bookstore of Magic-books Inc.(a fictional company).
 <!-- ![](./docs/screenshot.png) -->
@@ -8,6 +8,7 @@ A Bookstore application that will help organize and manage the bookstore of Magi
 ## Built With
 
 - React.js
+- Redux
 
 ## [Live Link](https://sam-wan-bookstore.herokuapp.com)
 
@@ -36,7 +37,7 @@ To test the logic files
 
 - Github: [@wandji20](https://github.com/wandji20)
 - Twitter: [@wandjibertrand](https://twitter.com/wandjibertrand)
-- Linkedin: [Linkedin](https://www.linkedin.com/in/wandji-bertrand/)
+- Linkedin: [WandjiBertrand](https://www.linkedin.com/in/wandji-bertrand/)
 
 ## 🤝 Contributing
 
