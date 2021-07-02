@@ -18,7 +18,7 @@ const BooksList = (props) => {
     changeFilter(filter);
   };
 
-  const filterBooks = (books, filter) => (filter === '' || filter === 'All' ? books
+  const filterBooks = (books, filter) => (filter === 'All' ? books
     : books.filter((book) => book.category === filter));
   const filteredBooks = filterBooks(books, filter);
   return (
