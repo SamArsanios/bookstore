@@ -2,8 +2,8 @@ import { CREATE_BOOK, REMOVE_BOOK } from '../actions';
 
 const initialState = {
   books: [
-    { ID: Math.random().toString(), title: 'Book 1', category: 'History' },
-    { ID: Math.random().toString(), title: 'Book 2', category: 'Sci-FI' },
+    { ID: Math.random().toString(), title: 'Book 1', category: 'Horror' },
+    { ID: Math.random().toString(), title: 'Book 2', category: 'Sci-Fi' },
     { ID: Math.random().toString(), title: 'Book 3', category: 'Action' },
   ],
 };
