@@ -7,19 +7,19 @@ const CategoryFilter = (props) => {
   return (
     <select
       onChange={handleFilterChange}
-      className="form-select w-25 my-4"
+      className="form-select"
       aria-label="Default select example"
     >
       {
-          categories.map((category) => (
-            <option
-              key={category}
-              value={category}
-            >
-              {category}
-            </option>
-          ))
-        }
+        categories.map((category) => (
+          <option
+            key={category}
+            value={category}
+          >
+            {category}
+          </option>
+        ))
+      }
     </select>
   );
 };
