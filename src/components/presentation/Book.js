@@ -22,8 +22,6 @@ const Book = (props) => {
           <button style={colorStyle} className="btn" type="button" onClick={() => handleRemoveBook(book)}>Remove</button>
           <button style={colorStyle} className="btn" type="button">Edit</button>
         </div>
-
-        {/* <h5>{book.ID}</h5> */}
       </div>
       <div className="col-3">
         <div className="oval-2">
