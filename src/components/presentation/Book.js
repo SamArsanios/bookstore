@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 const Book = (props) => {
   const { book, handleRemoveBook } = props;
+  const percentage = 66;
   return (
     <div className="row mt-3">
       <div className="col-3">
@@ -21,7 +24,10 @@ const Book = (props) => {
       </div>
       <div className="col-3">
         <div className="oval-2">
-          aom
+          <span className="">
+            <CircularProgressbar id="circular" value={percentage} />
+          </span>
+          <span>{`${percentage}%`}</span>
         </div>
       </div>
       <div className="col-3">
