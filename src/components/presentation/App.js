@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-light">
       <Nav />
       <BooksList />
       <BooksForm />

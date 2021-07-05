@@ -10,7 +10,7 @@ const Book = (props) => {
     color: '#4386bf',
   };
   return (
-    <div className="row my-5 py-3 book justify-content-between align-items-center mt-3">
+    <div className="row my-5 py-3 book justify-content-between align-items-center mt-3 bg-white">
       <div className="col-4 d-flex flex-column align-items-start">
         <div className="first d-flex flex-column nalign-items-start">
           <h6>{book.category}</h6>
