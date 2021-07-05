@@ -26,33 +26,41 @@ const BooksForm = (props) => {
     setTitle('');
     setCategory('');
   };
+  const colorStyle = {
+    backgroundColor: '#0290ff',
+    color: 'white',
+  };
   return (
-    <div>
-      <div className="mb-3">
-        <label htmlFor="exampleFormControlInput1" className="form-label">
-          Book Title
-          <input onChange={handleTitleChange} value={title} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Title" />
-        </label>
+    <div className="container">
+
+      <h4>ADD NEW BOOK</h4>
+      <div className="row d-flex justify-content-between">
+        <div className="mb-3 col-5">
+          <input onChange={handleTitleChange} value={title} type="text" className="form-control" placeholder="Title" />
+
+        </div>
+        <div className="col-3">
+          <select
+            onChange={handleCategoryChange}
+            className="form-select"
+            aria-label="Default select example"
+          >
+            {
+            categories.map((category) => (
+              <option
+                key={category}
+                value={category}
+              >
+                {category}
+              </option>
+            ))
+          }
+          </select>
+        </div>
+        <div className="col-2">
+          <button style={colorStyle} type="button" className="btn w-100" onClick={handleSubmit}>ADD BOOK</button>
+        </div>
       </div>
-
-      <select
-        onChange={handleCategoryChange}
-        className="form-select"
-        aria-label="Default select example"
-      >
-        {
-          categories.map((category) => (
-            <option
-              key={category}
-              value={category}
-            >
-              {category}
-            </option>
-          ))
-        }
-      </select>
-
-      <button type="button" className="btn btn-dark" onClick={handleSubmit}>Submit</button>
     </div>
   );
 };

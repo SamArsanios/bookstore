@@ -22,21 +22,8 @@ const BooksList = (props) => {
     : books.filter((book) => book.category === filter));
   const filteredBooks = filterBooks(books, filter);
   return (
-    <div>
+    <div className="container">
       <CategoryFilter handleFilterChange={handleFilterChange} />
-      <div className="container">
-        <div className="row">
-          <div className="col-3">
-            <h5>Book ID</h5>
-          </div>
-          <div className="col-3">
-            <h5>Title</h5>
-          </div>
-          <div className="col-3">
-            <h5>Category</h5>
-          </div>
-        </div>
-      </div>
       {
         filteredBooks.map((book) => (
           <Book
