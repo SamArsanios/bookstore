@@ -25,3 +25,25 @@ code {
     'Courier New',
     monospace;
 }
+
+#bookstore {
+  color: #0290ff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.fa {
+    width: 1.8rem;
+    height: 1.8rem;
+    color: #0290ff;
+}
+
+.oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
+  border-image-slice: 1;
+  border-radius: 50%;
+}
