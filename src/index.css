@@ -72,3 +72,14 @@ code {
 .btn:not(:first-of-type) {
   border-left: 1px solid #e8e8e8;
 }
+
+h6 {
+  color: #3a3737;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
