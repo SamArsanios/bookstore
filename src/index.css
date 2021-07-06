@@ -68,3 +68,7 @@ code {
 .book {
   border: 1px solid #e8e8e8;
 }
+
+.btn:not(:first-of-type) {
+  border-left: 1px solid #e8e8e8;
+}
