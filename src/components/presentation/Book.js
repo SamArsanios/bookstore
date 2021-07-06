@@ -35,7 +35,7 @@ const Book = (props) => {
         </div>
       </div>
       <div className="col-3 d-flex flex-column align-items-start">
-        <p>CURRENT CHAPTER</p>
+        <p className="chapter">CURRENT CHAPTER</p>
         <p>CHAPTER 16</p>
         <button style={{ backgroundColor: '#0290ff', color: 'white' }} type="button" className="btn">UPDATE PROGRESS</button>
       </div>

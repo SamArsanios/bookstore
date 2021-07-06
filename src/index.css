@@ -39,7 +39,7 @@ code {
 }
 
 .fa {
-  width: 1.8rem;
+  width: 2.9rem;
   height: 1.8rem;
   color: #0290ff;
 }
@@ -83,4 +83,8 @@ h6 {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+}
+
+.chapter {
+  color: #969696;
 }
