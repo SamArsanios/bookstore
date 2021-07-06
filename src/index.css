@@ -31,6 +31,7 @@ code {
   color: #0290ff;
   font-size: 30px;
   font-weight: 700;
+  padding-left: 60px;
 }
 
 .primary-color {
@@ -38,7 +39,7 @@ code {
 }
 
 .fa {
-  width: 1.8rem;
+  width: 2.9rem;
   height: 1.8rem;
   color: #0290ff;
 }
@@ -67,4 +68,22 @@ code {
 
 .book {
   border: 1px solid #e8e8e8;
+}
+
+.btn:not(:first-of-type) {
+  border-left: 1px solid #e8e8e8;
+}
+
+h6 {
+  color: #3a3737;
+  opacity: 0.5;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.chapter {
+  color: #969696;
 }
