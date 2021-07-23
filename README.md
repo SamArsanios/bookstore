@@ -10,7 +10,7 @@ A Bookstore application that will help organize and manage the bookstore of Magi
 - React.js
 - Redux
 
-## [Live Link](https://sam-wan-bookstore.herokuapp.com)
+## [Project Live Link](https://sam-wan-bookstore.herokuapp.com)
 
 ## Getting Started
 
